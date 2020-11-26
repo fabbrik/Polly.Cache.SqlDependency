@@ -1,1 +1,1 @@
-# Polly.SqlDependency.Cache
+# Polly.Cache.SqlDependency
