@@ -15,6 +15,11 @@ steps:
     command: 'build'
     projects: '**/Polly.Caching.SqlDependency.csproj'
     arguments: '-o $(Build.ArtifactStagingDirectory)'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '**/Polly.Caching.SqlDependency.csproj'
+    arguments: '-o $(Build.ArtifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
