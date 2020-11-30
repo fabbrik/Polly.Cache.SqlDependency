@@ -14,16 +14,6 @@ steps:
   inputs:
     command: 'build'
     projects: '**/Polly.Caching.SqlDependency.csproj'
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'pack'
-    packagesToPack: '**/Polly.Caching.SqlDependency.csproj'
-    includesymbols: true
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '0'
-    minorVersion: '1'
-    patchVersion: '0'
-    buildProperties: '--no-build'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
