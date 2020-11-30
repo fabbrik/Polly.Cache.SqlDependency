@@ -12,11 +12,6 @@ pool:
 steps:
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'restore'
-    projects: '**/Polly.Caching.SqlDependency.csproj'
-    feedsToUse: 'select'
-- task: DotNetCoreCLI@2
-  inputs:
     command: 'pack'
     packagesToPack: '**/Polly.Caching.SqlDependency.csproj'
     includesymbols: true
@@ -24,7 +19,6 @@ steps:
     majorVersion: '0'
     minorVersion: '1'
     patchVersion: '0'
-    buildProperties: '--no-restore'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
