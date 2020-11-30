@@ -20,7 +20,10 @@ steps:
     command: 'pack'
     packagesToPack: '**/Polly.Caching.SqlDependency.csproj'
     includesymbols: true
-    versioningScheme: 'byBuildNumber'
+    versioningScheme: 'byPrereleaseNumber'
+    majorVersion: '0'
+    minorVersion: '1'
+    patchVersion: '0'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
