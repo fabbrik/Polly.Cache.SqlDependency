@@ -12,9 +12,10 @@ pool:
 steps:
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'build'
+    command: 'restore'
     projects: '**/Polly.Caching.SqlDependency.csproj'
-    arguments: '-o $(Build.ArtifactStagingDirectory)'
+    feedsToUse: 'select'
+    vstsFeed: 'f071d1c4-f00c-4b7d-b6fe-3bee408811dd'
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
