@@ -15,15 +15,12 @@ steps:
     command: 'restore'
     projects: '**/Polly.Caching.SqlDependency.csproj'
     feedsToUse: 'select'
+    vstsFeed: 'f071d1c4-f00c-4b7d-b6fe-3bee408811dd'
 - task: DotNetCoreCLI@2
   inputs:
-    command: 'pack'
-    packagesToPack: '**/Polly.Caching.SqlDependency.csproj'
-    includesymbols: true
-    versioningScheme: 'byPrereleaseNumber'
-    majorVersion: '0'
-    minorVersion: '1'
-    patchVersion: '0'
+    command: 'build'
+    projects: '**/Polly.Caching.SqlDependency.csproj'
+    arguments: '-o $(Build.ArtifactStagingDirectory) --no-restore'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
