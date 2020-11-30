@@ -2,11 +2,29 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <Authors>Fabricio Zoff</Authors>
+    <Company>Zoff.Tech</Company>
+    <Description>Custom SQL Dependency Polly cache provider. The cache entries expired when results of SQL Query are added, updated or deleted.</Description>
+    <PackageProjectUrl>http://blog.zoff.tech/index.php/2020/11/28/sqldepency-to-expire-polly-cache/</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/fabbrik/Polly.Cache.SqlDependency</RepositoryUrl>
+    <PackageTags>SQLDependency Cache Polly Resilence Transient</PackageTags>
+    <PackageLicenseFile>LICENSE</PackageLicenseFile>
+    <AssemblyVersion>0.0.1.0</AssemblyVersion>
+    <FileVersion>0.0.1.0</FileVersion>
+    <Copyright>Copyright (c) 2020, Zoff Tech</Copyright>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="Polly.Caching.Memory" Version="3.0.2" />
     <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
     <PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
     <PackageReference Include="System.Security.Permissions" Version="5.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\..\LICENSE">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 </Project>

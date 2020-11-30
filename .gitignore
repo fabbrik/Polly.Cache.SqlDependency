@@ -123,3 +123,4 @@ tools
 *.lock.json
 *.nuget.targets
 *.nuget.props
+/src/Polly.Specs/App_Data

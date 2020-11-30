@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Polly.Caching
 {
-    internal class SqlDependencyCacheProvider : ISyncCacheProvider, IAsyncCacheProvider
+    public class SqlDependencyCacheProvider : ISyncCacheProvider, IAsyncCacheProvider
     {
         private readonly MemoryCache Mem = MemoryCache.Default;
 
