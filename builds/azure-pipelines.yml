@@ -14,3 +14,8 @@ steps:
   inputs:
     command: 'build'
     projects: '**/Polly.Caching.SqlDependency.csproj'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'binaries'
+    publishLocation: 'Container'
