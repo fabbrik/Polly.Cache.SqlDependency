@@ -24,6 +24,7 @@ steps:
     majorVersion: '0'
     minorVersion: '1'
     patchVersion: '0'
+    buildProperties: '-no-restore'
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
